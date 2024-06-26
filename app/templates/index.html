@@ -26,11 +26,14 @@
   <body>
     <header class="nav-bar">
       <div class="nav-content">
-        <a href="/">
+        <a href="/" style="margin-right: auto">
           <div class="nav-logo">
             <img src="./static/img/logo.svg" />
           </div>
         </a>
+        {% for route in routes %}
+        <a href="{{ URL }}/{{ route }}">{{ route }}</a>
+        {% endfor %}
       </div>
     </header>
 
@@ -40,30 +43,46 @@
       </div>
       <div class="profile-desc">
         <h1>{{ title }}</h1>
-        <p style="margin-top: 5px;">Robotics & Computer Science</p>
+        <p style="margin-top: 5px">Robotics & Computer Science</p>
       </div>
     </div>
 
     <div class="content">
       <div class="subhead">
-        <div class="left">
-          <p style="font-size: 1.35rem">
+        <div class="pink-left" style="margin-top: 2rem">
+          <p
+            style="
+              font-size: 1.35rem;
+              padding-top: 5px;
+              margin: 0;
+              padding-bottom: 5px;
+            "
+          >
             I'm an avid maker from New York interested in robotics, full-stack
-            development, and embedded security. In my free time, I like to
-            skateboard around the city, lose my mind over controls engienering,
-            and attend a buttload of hackathons :) You can learn more about me <a href="{{ about }}">here!</a>
+            development, and embedded security. I went to Bronx Science for high
+            school, and I'm now an incoming freshman at Worcester Polytechnic
+            Institute. In my free time, I like to skateboard around the city,
+            lose my mind over controls engienering, and attend a buttload of
+            hackathons :)
           </p>
         </div>
       </div>
     </div>
 
-      <div class="subhead" style="margin-top: 2rem;">
-        <div class="hobby">
-          <img src="./static/img/warren-robot.png" style="width: 500px; border-radius: 6%;" />
-          <p style="font-size: 12px;">Picture of me at my robotics competition! Yes I know, the cape is cool. You don't have to tell me.</p>
-        </div>
-        <div class="work-list">
-          <h1 style="margin-top: 1.5rem;">I've done a lot of work so far!</h1>
+    <div class="subhead" style="margin-top: 2rem">
+      <div class="hobby">
+        <img
+          src="./static/img/warren-robot.png"
+          style="width: 500px; border-radius: 6%"
+        />
+        <p style="font-size: 12px">
+          Picture of me at my robotics competition! Yes I know, the cape is
+          cool. You don't have to tell me.
+        </p>
+      </div>
+      <div class="work-list">
+        <div class="cyan-right">
+          <h1 style="margin-top: 1.5rem">I've done a lot of work so far!</h1>
           <ul>
             <li>Sciborgs Robotics, Team Captain</li>
             <li>AtomHacks Director & Head of Programming</li>
@@ -71,7 +90,7 @@
             <li>MITRE, Embedded Security Intern</li>
           </ul>
         </div>
-
+      </div>
     </div>
   </body>
 </html>

@@ -35,10 +35,14 @@ ul::marker {
   padding-top: 10px;
 }
 
+.nav-content {
+  display: flex;
+  align-items: center;
+}
+
 .nav-content .logo-touch-target {
   display: inline-flex;
   height: 60%;
-  width: 350px;
 }
 
 .nav-content .nav-logo {
@@ -57,7 +61,6 @@ ul::marker {
 
 .nav-content nav {
   display: block;
-  width: 100%;
   text-align: right;
   padding-top: 0px;
   padding-right: 0px;
@@ -129,7 +132,7 @@ ul::marker {
 
 .work-list {
   text-align: right;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .work-list li {
@@ -140,4 +143,18 @@ ul::marker {
 
 .hobby {
   text-align: left;
+}
+
+.pink-left {
+  border-left-width: 5px;
+  padding-left: 1rem;
+  border-color: rgb(219 39 119);
+  border-left-style: solid;
+}
+
+.cyan-right {
+  border-right-width: 5px;
+  padding-right: 2rem;
+  border-color: rgb(34 211 238);
+  border-right-style: solid;
 }
