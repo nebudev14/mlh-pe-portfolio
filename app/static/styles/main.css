@@ -132,7 +132,7 @@ ul::marker {
 
 .work-list {
   text-align: right;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .work-list li {
@@ -143,4 +143,18 @@ ul::marker {
 
 .hobby {
   text-align: left;
+}
+
+.pink-left {
+  border-left-width: 5px;
+  padding-left: 1rem;
+  border-color: rgb(219 39 119);
+  border-left-style: solid;
+}
+
+.cyan-right {
+  border-right-width: 5px;
+  padding-right: 2rem;
+  border-color: rgb(34 211 238);
+  border-right-style: solid;
 }
