@@ -19,6 +19,7 @@
 
     <link lang="sass" rel="stylesheet" href="./static/styles/main.css" />
     <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
+
     <title>{{ title }}</title>
   </head>
 
@@ -37,20 +38,37 @@
       <div id="profile-picture" class="profile-picture">
         <img src="./static/img/warren_working.png" />
       </div>
-      <h1>{{ title }}</h1>
+      <div class="profile-desc">
+        <h1>{{ title }}</h1>
+        <p>Robotics & Computer Science</p>
+      </div>
     </div>
 
     <div class="content">
-      <div class="left">
-        <h1>About</h1>
-        <p style="font-size: 1.5rem; text-align: center">
-          I'm Warren Yun. I'm an avid maker from New York interested in
-          robotics, full-stack development, and embedded security. In my free
-          time, I love to play Minecraft (preferrably Bedwars), skateboard
-          around the city, and attend a buttload of hackathons :)
-        </p>
+      <div class="subhead">
+        <div class="left">
+          <p style="font-size: 1.35rem">
+            I'm an avid maker from New York interested in robotics, full-stack
+            development, and embedded security. In my free time, I like to
+            skateboard around the city, lose my mind over controls engienering,
+            and attend a buttload of hackathons :)
+          </p>
+        </div>
       </div>
-      <h2>bye</h2>
+    </div>
+    <div class="content" style="justify-content: end">
+      <div class="subhead">
+        <div></div>
+        <div class="work-list">
+          <h1 style="margin-top: 1.5rem;">I've done a lot of work so far!</h1>
+          <ul>
+            <li>Sciborgs Robotics, Team Captain</li>
+            <li>AtomHacks Director & Head of Programming</li>
+            <li>Steamworks Robotics, FRC and FTC mentor</li>
+            <li>MITRE, Embedded Security Intern</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </body>
 </html>
