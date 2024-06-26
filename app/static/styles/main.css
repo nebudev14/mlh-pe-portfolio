@@ -18,8 +18,8 @@ body {
   font-family: "Roboto", serif;
   margin: 0px;
   padding-top: 2.5rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 ul::marker {
@@ -93,7 +93,6 @@ ul::marker {
 }
 
 .profile .profile-picture {
-  margin-bottom: 30px;
   height: 110px;
 }
 
@@ -120,21 +119,25 @@ ul::marker {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.content .subhead {
+.subhead {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .work-list {
   text-align: right;
+  margin-top:20px;
 }
 
 .work-list li {
   font-size: 1rem;
   margin-bottom: 0.25rem;
   direction: rtl;
+}
+
+.hobby {
+  text-align: left;
 }
