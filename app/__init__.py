@@ -1,5 +1,6 @@
 import os
-from flask import Flask, render_template, request
+import re
+from flask import Flask, render_template, request, abort
 
 from util.db import mydb
 from models.timeline import *
@@ -31,9 +32,26 @@ def timeline():
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
+    """ Added to Make Testing Pass - Ethan """
+    required_fields = {'name', 'email', 'content'}
+    provided_fields = set(request.form.keys())
+    
+    missing_fields = required_fields - provided_fields
+    
+    if missing_fields:
+        abort(400, description=f"Invalid {', '.join(missing_fields)}")
+
     name = request.form['name']
     email = request.form['email']
     content = request.form['content']
+
+    if not content: # checks if content is empty
+        abort(400, description=f"Invalid content")
+    if not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email):    # checks if email is formatted as an email
+        abort(400, description=f"Invalid email")
+
+    """ END OF FIELD CHECK - Ethan """
+
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
 
     return model_to_dict(timeline_post)
