@@ -32,7 +32,9 @@
           </div>
         </a>
         {% for route in routes %}
-        <a href="{{ URL }}/{{ route }}">{{ route }}</a>
+        <div style="margin-right: 2rem">
+          <a href="{{ URL }}/{{ route }}">{{ route }}</a>
+        </div>
         {% endfor %}
       </div>
     </header>

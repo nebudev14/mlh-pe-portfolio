@@ -23,7 +23,11 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template("about.html", title="Warren Yun")
+    return render_template("about.html", title="Warren Yun", routes=routes)
+
+@app.route('/timeline')
+def timeline():
+    return render_template("timeline.html", title="Warren's Timeline", routes=routes)
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
