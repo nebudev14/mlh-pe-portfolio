@@ -5,7 +5,6 @@ import os
 
 load_dotenv()
 
-
 if os.getenv("TESTING") == "true":
     print("Running in test mode")
     mydb = SqliteDatabase("file:memory?mode=memory&cache=shared", uri=True)
