@@ -11,4 +11,3 @@ class TimelinePost(Model):
 
   class Meta:
     database = mydb
-

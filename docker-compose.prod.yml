@@ -24,6 +24,7 @@ services:
     restart: always
     environment:
       - CERTBOT_EMAIL=wyun2006@gmail.com
+      - NGINX_ENTRYPOINT_QUIET_LOGS
     ports:
      - 80:80
      - 443:443

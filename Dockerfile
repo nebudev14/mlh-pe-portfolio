@@ -1,4 +1,4 @@
-FROM python:3.9-slim-buster
+FROM python:3.9-slim-buster 
 
 WORKDIR /portfolio
 
@@ -10,4 +10,5 @@ COPY . .
 
 CMD ["flask", "run", "--host=0.0.0.0"]
 
-EXPOSE 5000
+EXPOSE 500
+COPY nginx.conf /etc/nginx/nginx.conf
